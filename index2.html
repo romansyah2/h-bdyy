@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Happy 17 🤍</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+
+<style>
+body {
+    
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1d1c1c, #8a878b);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    background: rgb(153, 145, 145);
+    backdrop-filter: blur(15px);
+    width: 85%;
+    max-width: 380px;
+    padding: 30px 20px;
+    border-radius: 25px;
+    box-shadow: 0 15px 35px rgba(255, 255, 255, 0.2);
+    text-align: center;
+    position: relative;
+    color: white;
+}
+
+h1 {
+    font-weight: 500;
+    color: #141414;
+}
+
+.typing {
+    margin-top: 20px;
+    font-size: 15px;
+    color: #1d1b1b;
+    white-space: pre-wrap;
+}
+
+button {
+    margin-top: 25px;
+    padding: 10px 25px;
+    border: none;
+    background: #7e7e7e;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #464445;
+    transform: scale(1.05);
+}
+
+.heart {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    font-size: 40px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <div class="heart">💗</div>
+    <h1>WELCOME TO 17 YEARS 🤍</h1>
+
+    <div id="typingText" class="typing">
+selamat datang di 17 tahun omann...
+2 maret 2009, dimana omaan lahir keduniaa inii,,
+happy birthday yaaa 🥳💗
+17 bukan cuma angka, tapi awal cerita yang lebih seru lagi. Semoga omaann makin dewasa
+tanpa kehilangan sisi lucu dan hangat omann yaa...
+terima kasih udah jadi orang yang selalu ada. semoga panjang umur, sehat terus,
+rezekinya lancar, dan hatinya selalu dijaga 
+sama hal-hal baik...
+
+tetep jadii omaan yang aku kenal yaa,
+    aku tau cobaan omaan itu dikeluarga, ttp jadi orang sabar n ihklas untuk menghadapi masalah' yang
+    buat oman capee yaa?? because emosi membuat oman kehilangann segalanyaa, diumur oman yang uda serius ini
+    jangan sering' ninggalin solat yaa?? malaikat gabakal nanya "apa merek roko kamu" tpi yg ditnya iman sm amalan kamu 
+    soo jangan sepelein solat yaa?? ukeii...
+     aku bangga samaa omaann udaa bisaa melawatin semuanyaaa...
+
+di umur omann yang mulai legal ini, lakuin hal' yang bermanfaat yaa, ttp jdi suport system juliaa yaa omaan
+aduh bingung mau ngetik apalagi, intinyaa selamatt ulang tahun yaa omaann, sehat selalu, panjang umur,
+lancar rezekinya, dijauhin sma hal' negatif Amiinnnn....💕
+happy birthday, my love. live a long, long life, okay? i love you even more. 💕
+
+    </div>
+
+    <button onclick="alert('I love you more 💕')">klik aku</button>
+</div>
+
+<script>
+function typeEffect(element, speed) {
+  const text = element.innerHTML;
+  element.innerHTML = "";
+  let i = 0;
+
+  function typing() {
+    if (i < text.length) {
+      element.innerHTML += text.charAt(i);
+      i++;
+      setTimeout(typing, speed);
+    }
+  }
+  typing();
+}
+
+window.onload = function() {
+ typeEffect(document.getElementById("typingText"), 100);
+
+};
+</script>
+<audio id="bgMusic" loop>
+    <source src="mp3.mpeg" type="audio/mpeg">
+</audio>
+
+<script>
+window.addEventListener("load", function() {
+    const music = document.getElementById("bgMusic");
+
+    function playMusic() {
+        music.play().catch(() => {});
+        document.removeEventListener("click", playMusic);
+    }
+
+    // otomatis coba play
+    playMusic();
+
+    // kalau masih diblokir, play saat klik pertama
+    document.addEventListener("click", playMusic);
+});
+</script>
+
+</body>
+</html>

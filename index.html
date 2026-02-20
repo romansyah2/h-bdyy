@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome 17 🤍</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #1e1e1e, #d4d1d6);
+    overflow: hidden;
+}
+
+/* Card */
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    padding: 35px 25px;
+    width: 90%;
+    max-width: 420px;
+    border-radius: 25px;
+    text-align: center;
+    color: white;
+    animation: fadeIn 1.5s ease;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+h1 {
+    font-weight: 600;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+
+p {
+    font-weight: 300;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+/* Button */
+button {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    background: white;
+    color: #333;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+button:hover {
+    transform: scale(1.1);
+    background: #e0d6db;
+    color: white;
+    box-shadow: 0 0 15px #292426;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Floating heart */
+.heart {
+    position: absolute;
+    font-size: 25px;
+    animation: float 5s infinite ease-in-out;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: translateY(-100vh); opacity: 0; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>WELCOME TO 17 YEARS 🤍</h1>
+    <p>haiii... klik tombol dibawah yaa 💕</p>
+    <button onclick="lanjut()">lanjutkan</button>
+</div>
+
+<script>
+function lanjut(){
+    window.location.href = "index2.html"; // ganti sesuai nama file kamu
+}
+
+/* Random floating hearts */
+function createHeart(){
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "🎂";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = Math.random() * 3 + 3 + "s";
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 5000);
+}
+
+setInterval(createHeart, 350);
+</script>
+
+</body>
+</html>
